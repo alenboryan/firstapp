@@ -1,0 +1,67 @@
+{%load static %}
+<form action="{% url 'register' %}" method="post">
+    {% csrf_token %}
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Register-login Form</title>
+    <link rel="stylesheet" href="{% static 'polls/css/singup.css' %}">
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".login").hide();
+			$(".register_li").addClass("active");
+
+			$(".login_li").click(function(){
+			  $(this).addClass("active");
+			  $(".register_li").removeClass("active");
+			  $(".login").show();
+			   $(".register").hide();
+			})
+
+			$(".register_li").click(function(){
+			  $(this).addClass("active");
+			  $(".login_li").removeClass("active");
+			  $(".register").show();
+			   $(".login").hide();
+			})
+		});
+	</script>
+</head>
+<body>
+  <div class="wrapper">
+  <div class="left">
+      <h3>Rocket Station</h3>   
+    <img src="https://i.imgur.com/eN4AKys.png" alt="Rocket_image">
+  </div>
+  <div class="right">
+    <div class="tabs">
+      <ul>
+        <li class="register_li">Register</li>
+      </ul>
+    </div>
+    
+    <div class="register">
+      <div class="input_field">
+        <input type="text" name="firstname" id="firstname" value="" placeholder="Firstname" class = "input" >
+      </div>
+      <div class="input_field">
+        <input type="text" name="lastname" id="lastname" value="" placeholder="lasname" class = "input">
+      </div>
+      <div class="input_field">
+        <input type="text" name="username" id="username" value="" placeholder="Username" class = "input">
+      </div>
+      <div class="input_field">
+        <input type="password" name="password" id="password" value="" placeholder="Password" class = "input">
+      </div>
+      <input type="submit" value="Sign Up" class="input">
+        </div>
+    
+    
+  </div>
+</div>
+</body>
+</html>
+      
+    </form>
