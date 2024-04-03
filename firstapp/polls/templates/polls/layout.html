@@ -1,31 +1,75 @@
-{%load static%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title%}{%endblock%}</title>
+    <title>{% block title %}My Website{% endblock %}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{% static 'polls/css/polls.css'%}">
+    <link rel="stylesheet" href="{% static 'polls/css/polls.css' %}">
+    <style>
+      .left-nav {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 200px; /* Adjust the width as needed */
+         height: 100%; /* Ensures the navigation bar covers the entire height */
+         background-color: #ffffff; /* Background color of the navigation bar */
+         color: #fff; /* Text color */
+       }
+       
+       .left-nav nav {
+         padding-top: 20px; /* Add some padding to separate links from the top */
+       }
+       
+       .left-nav a {
+         display: block;
+         padding: 10px 20px; /* Padding for each link */
+         color: #2c2a2a; /* Text color */
+         text-decoration: none; /* Remove underlines from links */
+       }
+       
+       .left-nav a:hover {
+         background-color: #9c9fc2; /* Background color on hover */
+       }
+       
+       .section-container {
+         margin-left: 200px; /* Adjust margin to make space for the left navigation bar */
+       }
+    </style>
 </head>
 <body>
-    <aside>
-        <img src="{% static 'polls/img/pythonph.png'%}" alt="Logo">
-        <span class=" Logo">PySite</span>
-        <ul>
-            <a href="{%url 'index'%}"><li><i class="fa-solid fa-house"></i>Home page</li></a>
-            <a href="{%url 'about'%}"><li><i class="fa-thin fa-address-card"></i>About us</li></a>
-            <a href="{%url 'login'%}"><li><i class="fa-thin fa-address-card"></i>Login</li></a>
-            <a href="{%url 'register'%}"><li><i class="fa-thin fa-address-card"></i>Register</li></a>
-            <a href="{%url 'python_intro'%}"><li><i class="fa-thin fa-address-card"></i>Python Intro</li></a>
 
-        </ul>
-    </aside>
-    <main>
-        {% block content%}
-    {%endblock%}
+<header>
+    <h1>Welcome to My Website</h1>
+</header>
+
+<nav>
+    <a href="{% url 'index' %}">Home</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'register' %}">Register</a>
+ 
+</nav>
 
 
-    </main>
+<div class="left-nav">
+   <nav>
+      <h2>PYsite</h2>
+       <a href="{% url 'python_syntax' %}">Python Syntax</a>
+       <a href="{% url 'python_intro' %}">Python Introduction</a>
+       <a href="{% url 'create' %}"><li><button class="btn btn-info"><i class="fas fa-plus-cricle"></i>Add Info</button></li></a>
+   </nav>
+</div>
+<section>
+    {% block content %}
+    {% endblock %}
+</section>
+
+<footer>
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+</footer>
+
 </body>
 </html>
+

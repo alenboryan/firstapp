@@ -1,94 +1,262 @@
-body{
-    background: #2c2c2c;
-}
-
-aside{
-    float: left;
-    background:#181818;
-    width: 13%;
-    height: 100vh;
-    color: #fff;
-    border-right: 5px solid #4d4d4d;
-
-}
-
-aside img{
-    width: 50px;
-    float: left;
-    position: relative;
-    margin-left: 20px;
-    margin-top: 10px;
-}
-aside .Logo{
-    font-size: 40px;
-    margin-left: 10px;
-    font-weight: bold;
-    position: relative;
-    top: 5px;
-}
-aside ul{list-style:none}
-aside ul li{
-    color: #fff;
-    display: block;
-    margin-top: 20px;
-    transition: transform  .6s ease;
-}
-aside ul li:hover,aside ul a:hover {
-        color: darkslategray;
-        transform: scale(1.05);
-        text-decoration: underline;
-}
-main .features{
-    float: left;
-    color: #fff;
-    margin-top: 100px;
-    text-align: center;
-    width: 75%;
-}
 body {
     font-family: Arial, sans-serif;
-    background-color: rgb(30, 70, 39);
     margin: 0;
+    padding: 0;
+    background-color: #9c9fc2;
+}
+header {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+nav {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    color: #000000;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+nav a:hover {
+    background-color: #ffffff;
+}
+section {
+    padding: 20px;
+    text-align: center;
+}
+footer {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #9c9fc2;
+  }
+  
+  .container {
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="submit"] {
+    width: 200%;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  input[type="submit"] {
+    background-color: #0056b3;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Nunito', sans-serif;
+}
+
+body{
+  background: #9c9fc2;
+}
+
+.wrapper{
+  display: flex;
+  max-width: 560px;
+  width: 100%;
+  height: 350px;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.wrapper .left,
+.wrapper .right{
+  width: 50%;
+  height: 100%;
+  padding: 30px;
+}
+
+.wrapper .left{
+  background: #494f57;
+}
+
+.wrapper .left h3{
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #fff;
+  font-size: 20px;
+}
+
+.wrapper .left img{
+  display: block;
+  width: 220px;
+  margin: 25px auto 0;
+}
+
+.wrapper .right{
+  background: #fff;
+}
+
+.wrapper .right .tabs ul{
+  text-align: center;
+}
+
+.wrapper .right .tabs ul li{
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #494f57;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.wrapper .right .tabs ul li.active{
+  border-bottom: 2px solid #494f57;
+}
+
+.wrapper .right .register,
+.wrapper .right .login{
+  margin-top: 1px;
+}
+
+.wrapper .right .input_field{
+  margin-bottom: 5px;
+}
+
+.wrapper .right .input_field .input{
+  width: 100%;
+  padding: 10px 15px;
+  border: 0;
+  font-size: 12px;
+  background: #ecebeb;
+  margin-top: 7px;
+}
+
+.wrapper .right .btn{
+  margin-top: 20px;
+  background: #494f57;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+.wrapper .right .btn a{
+  color: #fff;
+  display: block;
+  font-size: 14px;
+}
+.input[type="submit"] {
+  width: 100px; /* Adjust the width as needed */
+  margin-top: 10px; /* Adjust the margin top to increase space */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-form {
-    background-color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
 }
 
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
+h1, h2 {
+    color: #333;
 }
 
-input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    box-sizing: border-box;
+ul {
+    list-style-type: none;
+    padding-left: 20px;
 }
 
-button {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
+li {
+    margin-bottom: 10px;
 }
 
-button:hover {
-    background-color: #45a049;
+/* Specific styles for the content */
+h1 {
+    font-size: 2.5rem;
 }
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/* Additional styles for specific elements */
+ul li {
+    padding-left: 0;
+}
+
+ul li::before {
+    content: "•";
+    margin-right: 5px;
+}
+
+/* Styling links */
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+header h1{
+  color: #000000;
+}
+nav h2{
+  color: #000000;
+  font-size: 30px;
+}
+
+
