@@ -107,3 +107,8 @@ def create(request):
         'error': error
     }
     return render(request, 'polls/create.html', data)
+
+
+def add_info(request):
+    info = Addinfo.objects.all()
+    return render(request, 'polls/info.html',{"info":info})

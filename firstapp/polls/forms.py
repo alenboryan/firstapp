@@ -14,7 +14,7 @@ class AddinfoForm(ModelForm):
             } ),
             "anons":TextInput(attrs={
                 'class':'form_control',
-                'placeholder':'Anons'
+                'placeholder':'Info'
             } ),
             "date":DateTimeInput(attrs={
                 'class':'form_control',
