@@ -67,7 +67,7 @@ Project functionality -> API List
 
 Database:
 
-  1.PollUser
+  1.PyUser
 
   2.Addinfo
 
@@ -79,5 +79,6 @@ Additional Info:
 
   
 
-  
-  
+1. Complete registration and login
+2. Add information pages
+3. Add Database 
