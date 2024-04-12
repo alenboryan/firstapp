@@ -273,30 +273,10 @@ form textarea {
   border-radius: 15px; /* Applies border-radius to input and textarea elements inside the form */
   /* Add any additional styling for the input elements if needed */
 }
-.features {
-  float: left;
-  color: #fff;
-  margin-top: 10px;
-  text-align: center;
-  width: 75%;
-  margin-right: 50px;
-
+.features h1{
+  margin-left: 50px;
 }
-.features h1 {font-size: 50px;}
-.features p {max-width: 400px; margin: 20px auto}
 
-.alert-wrning{
-  width: 1000px; /* Set the width of the container to 1000 pixels */
-  height: 2000px; /* Set the height of the container to 600 pixels */
-  margin: 20px auto;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            
-            /* Additional styles */
-  color: #333; /* Change text color */
-  font-size: 16px; /* Change font size */
-  line-height: 1.6; /* Change line height */
-  border: 1px solid #ccc; /* Add border */          
+.features button{
+  margin-left: 300px;
 }
